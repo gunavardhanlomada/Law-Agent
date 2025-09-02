@@ -1,0 +1,10 @@
+.Header_container__C_tPB {
+    width: 100%;
+    padding: 0 36px;
+    display: grid;
+    position: relative;
+    z-index: 1;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    border-bottom: .5px solid var(--border-color);
+}
