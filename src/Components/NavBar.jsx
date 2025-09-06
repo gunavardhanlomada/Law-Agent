@@ -1,56 +1,55 @@
-import React from 'react';
-import '../Styles/NavBar.css'; 
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../Styles/NavBar.css";
 
-function NavBar() {
+export default function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div className="Header_container__C_tPB">
-      <a className="Header_logo_container__FoHca" aria-label="Paradigm home" href="/">
-        {/* Simplified SVG Logo */}
-        <svg width="191" height="24" viewBox="0 0 191 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 0h191v24H0z" fill="none" />
-          <text x="0" y="20" fill="white" fontSize="16">LOGO</text>
-        </svg>
-      </a>
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Logo */}
+        <div className="navbar-logo">
+          <div className="logo-icon">
+            <span>⚖️</span>
+          </div>
+          <span className="logo-text">LegalAI Assistant</span>
+        </div>
 
-      <nav aria-label="Main" className="Header_nav__f2MAs" data-orientation="horizontal" dir="ltr">
-        <ul className="Header_nav_list__nSicT" data-orientation="horizontal" dir="ltr">
-          <li>
-            <button className="Header_nav_item__NfT0M Header_resource__XKsnO Header_nav_trigger__dXeYH">
-              Solutions
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="icon">
-                <path d="M7 3L4 6L1 3" stroke="currentColor" strokeLinecap="square" />
-              </svg>
-            </button>
-          </li>
-          <li>
-            <button className="Header_nav_item__NfT0M Header_resource__XKsnO Header_nav_trigger__dXeYH">
-              Product
-              <svg width="8" height="8" viewBox="0 0 8 8" fill="none" className="icon">
-                <path d="M7 3L4 6L1 3" stroke="currentColor" strokeLinecap="square" />
-              </svg>
-            </button>
-          </li>
-          <li><a className="Header_nav_item__NfT0M" href="/templates">Templates</a></li>
-          <li><a className="Header_nav_item__NfT0M" href="/careers">Careers</a></li>
-          <li><a className="Header_nav_item__NfT0M" href="/blog">Blog</a></li>
-          <li><a className="Header_nav_item__NfT0M" href="/pricing">Pricing</a></li>
-        </ul>
-      </nav>
+        {/* Links */}
+        <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
+          <NavLink to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/search" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Legal Search
+          </NavLink>
+          <NavLink to="/chat" className="nav-link" onClick={() => setMenuOpen(false)}>
+            AI Chat
+          </NavLink>
+          <NavLink to="/research" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Research Agent
+          </NavLink>
+          <NavLink to="/resources" className="nav-link" onClick={() => setMenuOpen(false)}>
+            Resources
+          </NavLink>
+        </div>
 
-      <div className="Header_actions__fWU2C">
-        <a href="https://app.paradigmai.com/login" className="Header_cta__lMuDZ Header_login___vSOc">Log in</a>
-        <a href="https://app.paradigmai.com/login" className="Header_cta__lMuDZ">
-          <button className="Button_button__8B4nB body Header_sign_up__HFlh4 dark outline">
-            <span>Sign up</span>
-          </button>
-        </a>
-        <button className="Header_menu_mobile_button__hr4Dk">
-          <div className="Header_bar__vO_JW top_bar"></div>
-          <div className="Header_bar__vO_JW bottom_bar"></div>
+        {/* SVG Hamburger Button (Mobile Only) */}
+        <button
+          className="hamburger-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50"
+            className="hamburger-icon"
+          >
+            <path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"></path>
+          </svg>
         </button>
       </div>
-    </div>
+    </nav>
   );
 }
-
-export default NavBar;
