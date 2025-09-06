@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 import Aichat from './Components/Aichat';
 import LegalResources from './Components/resources';
 import Home from './Components/Home';
+import ResearchPaperAgent from './Components/ResearchPaperAgent';
 
 function App() {
 
@@ -16,9 +17,8 @@ function App() {
       <Route path="/" element={<Home/>} />
       <Route path="/legalsearch" element={<div>legalsearch Page</div>} />
       <Route path="/aichat" element={<Aichat/>} />
-      <Route path="/researchagent" element={<div>research agent Page</div>} />
+      <Route path="/researchagent" element={<ResearchPaperAgent/>} />
       <Route path="/resources" element={<LegalResources />} />
-      
       <Route path="*" element={<div>404 Not Found</div>} />
     </Routes>
     </BrowserRouter>

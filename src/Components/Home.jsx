@@ -1,4 +1,5 @@
 // import "../Styles/Home.css"
+import { Link } from "react-router-dom";
 import { cn } from "../lib/utils.jsx";
 
 const Home = () => {
@@ -71,6 +72,7 @@ const Home = () => {
             </div>
 
             {/* Card 3 */}
+            <Link to="/researchagent">
             <div className="bg-gray-500/30 border border-gray-700 rounded-2xl p-8 shadow-lg backdrop-blur-sm transition transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:shadow-purple-500/50">
               <div className="flex justify-center mb-4">
                 <div className="w-12 h-12 flex items-center justify-center bg-pink-600 rounded-full">
@@ -84,6 +86,7 @@ const Home = () => {
                 Generate comprehensive legal research papers and analysis
               </p>
             </div>
+            </Link>
           </div>
         </div>
       </section>
