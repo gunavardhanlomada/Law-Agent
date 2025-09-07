@@ -21,13 +21,13 @@ export default function NavBar() {
           <NavLink to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
             Home
           </NavLink>
-          <NavLink to="/search" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/legalsearch" className="nav-link" onClick={() => setMenuOpen(false)}>
             Legal Search
           </NavLink>
-          <NavLink to="/chat" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/aichat" className="nav-link" onClick={() => setMenuOpen(false)}>
             AI Chat
           </NavLink>
-          <NavLink to="/research" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/researchagent" className="nav-link" onClick={() => setMenuOpen(false)}>
             Research Agent
           </NavLink>
           <NavLink to="/resources" className="nav-link" onClick={() => setMenuOpen(false)}>
