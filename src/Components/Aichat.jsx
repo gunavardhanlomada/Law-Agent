@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { jsPDF } from "jspdf";
 import axios from "axios";
 import "../Styles/LegalChat.css";
+import ReactMarkDown from "react-markdown";
 
 const API_BASE = "http://localhost"; 
 
@@ -27,6 +28,7 @@ const LegalChat = () => {
 
     if (activeTab === "general" && savedGeneral) {
       setSessionId(savedGeneral);
+      console.log("Working...!")
     } else if (activeTab === "legal" && savedAdvocate) {
       setSessionId(savedAdvocate);
     }
@@ -169,7 +171,7 @@ const LegalChat = () => {
           <div className="chat-box">
             <div className="messages">
               {messages.map((msg, i) => (
-                <div key={i} className="message">{msg}</div>
+                <div key={i} className="message"><ReactMarkDown>{msg}</ReactMarkDown></div>
               ))}
               <div ref={messagesEndRef} />
             </div>
