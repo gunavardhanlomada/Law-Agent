@@ -92,6 +92,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 800px;
 }
 
 /* Messages */
