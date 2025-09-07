@@ -118,8 +118,8 @@ export default function ResearchPaperAgent() {
             <h2 className="card-heading">📑 Research Output</h2>
             <button className="btn-export">Export PDF</button>
           </div>
-          <div className="output-box">
-            {output || "Your research paper will appear here after generation..."}
+          <div className="output-box"  dangerouslySetInnerHTML={{__html:output}}>
+            {/* {"Your research paper will appear here after generation..."} */}
           </div>
         </div>
       </div>
