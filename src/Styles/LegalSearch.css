@@ -1,0 +1,92 @@
+/* Legal Search Section */
+.legal-search {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #0f172a;
+  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+                    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: #fff;
+}
+
+.legal-search h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  background: #1b1d2b;
+  border: 1px solid #9b59b6;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background: linear-gradient(90deg, #9b59b6, #3498db);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  opacity: 0.9;
+}
+
+/* Suggested Topics */
+.topics-container {
+  margin-top: 40px;
+}
+
+.topics-container h3 {
+  color: #1abc9c;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.topic-card {
+  background: #1b1d2b;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.topic-card h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #9b59b6;
+}
+
+.topic-card p {
+  color: #bbb;
+  font-size: 14px;
+}

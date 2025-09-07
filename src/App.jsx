@@ -2,6 +2,7 @@ import React from 'react';
 // import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar';
+import LegalSearch from './Components/LegalSearch';
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<div>Home Page</div>} />
-      <Route path="/legalsearch" element={<div>legalsearch Page</div>} />
+      <Route path="/legalsearch" element={<LegalSearch/>} />
       <Route path="/aichat" element={<div>ai chat Page</div>} />
       <Route path="/researchagent" element={<div>research agent Page</div>} />
       <Route path="/resources" element={<div>resources Page</div>} />
