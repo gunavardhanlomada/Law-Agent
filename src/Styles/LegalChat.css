@@ -20,7 +20,7 @@ body {
   color: white;
   text-align: center;
   animation: fadeUp 1s ease forwards;
-  min-height: 100vh;
+  min-height: 90vh;
   overflow-y: auto;
   overflow-x: hidden;
   padding-bottom: 50px;

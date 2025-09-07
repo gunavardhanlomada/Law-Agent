@@ -21,7 +21,7 @@ export default function NavBar() {
           <NavLink to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
             Home
           </NavLink>
-          <NavLink to="/search" className="nav-link" onClick={() => setMenuOpen(false)}>
+          <NavLink to="/legalsearch" className="nav-link" onClick={() => setMenuOpen(false)}>
             Legal Search
           </NavLink>
           <NavLink to="/aichat" className="nav-link" onClick={() => setMenuOpen(false)}>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import "../Styles/ResearchPaperAgent.css";
 
-const API_BASE = "http://localhost:8000"; 
+const API_BASE = "http://localhost"; 
 
 const startPapersSession = async() => {
   const res = await axios.post(`${API_BASE}/papers/start`);
